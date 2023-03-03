@@ -1,53 +1,72 @@
 body {
-    margin: 30;
-    padding-left: 60px;
-    padding-right: 60px;
-    line-height: 1.8;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: rgb(255, 255, 255);
-    font-family: 'Josefin Sans'; font-size: 18px;
-
-    
-  }
-
-
-  a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    color:black;
-    font-weight: bold;
-    padding-top: 20px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  font-family: "Josefin Sans";
+  font-size: 18px;
 }
 
-  .socials{
-    text-align: right;
-    margin-top: 10px;
-  }
+p {
+  margin: 0 0 1em;
+}
 
-  .btn{
-    border: 0px solid #dfe7ef;
-    border-radius: 8px;
-    color: #3498db;
-    background: none;
-    text-emphasis-color: #dfe7ef;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-family: "Josefin Sans";
-    cursor: pointer;
-    margin: 10px;
-    transition: 0.7s;
-    position: relative;
-    overflow: hidden;
+header {
+  margin-bottom: 20px;
+}
 
-  }
-  .btn:hover{
-    color: #fff;
-  }
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
- .btn::before{
+.header-icon {
+  display: inline;
+}
+
+.header-title {
+  display: inline;
+  font-size: 50px;
+  font-weight: bold;
+  padding-top: 20px;
+  line-height: 1;
+  margin: 0;
+}
+
+.header-title a {
+  color: #024133;
+  text-decoration: none;
+}
+
+.header-subtitle {
+  font-size: 22px;
+}
+
+.header-socials {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  border: 0px solid #dfe7ef;
+  border-radius: 8px;
+  color: #3498db;
+  background: none;
+  text-emphasis-color: #dfe7ef;
+  padding: 10px 20px;
+  font-size: 20px;
+  transition: 0.7s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn::before {
   content: "";
   position: absolute;
   left: 0;
@@ -58,10 +77,21 @@ body {
   transition: 0.7s;
   bottom: 0;
   border-radius: 50% 50% 0 0;
- }
+}
 
- .btn:hover::before{
+.btn:hover::before {
   height: 180%;
- }
+}
 
+.headshot {
+  margin-right: 50px;
+}
 
+.intro {
+  display: flex;
+  align-items: flex-start;
+}
+
+footer {
+  text-align: center;
+}
