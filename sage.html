@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sage | Tina Ma</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Sans" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div>
+                <img class="header-icon" width="50" height="50" src="images/icon.svg">
+                <h1 class="header-title"><a href="index.html">TINA MA</a></h1>
+            </div>
+            <nav class="header-socials">
+                <a class="btn" href="https://github.com/tintin1424" target="_blank">GitHub</a>
+                <a class="btn" href="https://www.linkedin.com/in/tinatjma/" target="_blank">LinkedIn</a>
+                <a class="btn" href="https://www.youtube.com/channel/UCMlVSndp9Bjpvs72j-nuG-g" target="_blank">YouTube</a>
+                <a class="btn" href="https://www.linkedin.com/in/tinatjma/">Resume</a>
+            </nav>
+        </div>
+        <p class="header-subtitle">math & cs @ ucla</p>
+    </header>
+    <main>
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <article class="project-detail">
+            <h2>Sage</h2>
+            <p class="project-tagline">Connecting seniors with meaningful companionship through video calls</p>
+
+            <img class="hero-img" src="https://github.com/jasmine-dragons/sage/assets/40480195/7a862992-b431-4b1a-aa1d-ab91baa882a2" alt="Sage App Preview">
+
+            <section class="project-section">
+                <h3>Why I Built This</h3>
+                <p>I pitched this app idea to my team because I've always been especially close to my grandma. As she's gotten older and I left for college, I saw that technology and calling was something she frequently wanted to do but had difficulty with—buttons and text were small, and apps had too many complex features that weren't senior-friendly. Popups and ads would get in her way of being able to call her friends, and more importantly, me!</p>
+                <p>It turns out this isn't just my grandma's experience. More than one-third of adults aged 45+ feel lonely, and nearly 27% of American seniors live alone.</p>
+            </section>
+
+            <section class="project-section">
+                <h3>The Solution</h3>
+                <p>Sage is a web application that facilitates meaningful connections for elderly adults through video calls. Users can connect with volunteer strangers matched by shared interests, or reach out to trusted friends and caregivers in their personal network.</p>
+            </section>
+
+            <section class="project-section">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>One-click video calling to connect with volunteers or personal contacts</li>
+                    <li>Interest-based matching algorithm for volunteer pairings</li>
+                    <li>User authentication and profile creation</li>
+                    <li>Real-time notification system</li>
+                    <li>Accessibility-focused interface with larger text options</li>
+                </ul>
+            </section>
+
+            <section class="project-section">
+                <h3>User Story</h3>
+                <p class="caption">We first started with a user story to better understand our target user.</p>
+                <img class="project-img-full" src="https://github.com/jasmine-dragons/sage/assets/44332326/108653ae-fb3b-4671-a408-46a0fc8f5d84" alt="User Story Diagram">
+            </section>
+
+            <section class="project-section">
+                <h3>Lo-fi Prototypes</h3>
+                <p class="caption">I kicked off our app-design with some concept sketching and lo-fi prototyping. My writing was a little messy here; we were under a time crunch!</p>
+                <div class="project-gallery">
+                    <img src="https://github.com/jasmine-dragons/sage/assets/40480195/d8c22d5d-2e3a-46a3-b282-11ecdc2c47ef" alt="Lo-fi Prototype 1">
+                    <img src="https://github.com/jasmine-dragons/sage/assets/40480195/57ca75b6-3641-4e03-9649-13af446a10f6" alt="Lo-fi Prototype 2">
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h3>Hi-fi Prototypes</h3>
+                <p class="caption">We started out with a mobile app concept, but we decided to switch to a web app to allow for larger text/accessibility. We created a hi-fi prototype for our web app using <a href="https://www.figma.com/file/bkod0UOX2CC61OJcHg1562/sage?type=design&node-id=0%3A1&mode=design&t=6oTvIf2k9D5zww1V-1" target="_blank">Figma</a>.</p>
+                <div class="project-gallery">
+                    <figure>
+                        <img src="https://github.com/jasmine-dragons/sage/assets/40480195/b5947e29-87ef-4576-8bbb-b9dfed6f4b9e" alt="Hi-fi Mobile App Prototype">
+                        <figcaption>Mobile App</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://github.com/jasmine-dragons/sage/assets/40480195/7a862992-b431-4b1a-aa1d-ab91baa882a2" alt="Hi-fi Web App Prototype">
+                        <figcaption>Web App</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h3>Engineering</h3>
+                <p>For frontend, we used a combination of Next.js, React, Material UI, and CSS. There are a variety of different screens including the login/sign-up page, the request call, and the call page. As this is a Next.js application, we used the serverless function as a primary backend. We used Twilio to implement the video call feature, and additionally ran a Flask server to support the sockets. Twilio's Programmable Video API was used to facilitate calls between users and Websockets were used in conjunction with Flask to match users online at the same time.</p>
+                <img class="project-img-full" src="https://github.com/jasmine-dragons/sage/assets/40480195/30e6013b-e1dc-4f0d-9062-1fe91a7fe94f" alt="Architecture Diagram">
+            </section>
+
+            <section class="project-section">
+                <h3>Screens</h3>
+                <p class="caption">Here are a few of our screens:</p>
+                <div class="project-gallery">
+                    <figure>
+                        <img src="https://github.com/jasmine-dragons/sage/assets/40480195/e04dc84d-1628-4372-bd9f-ae28d68c59e8" alt="Landing Screen">
+                        <figcaption>Landing</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://github.com/jasmine-dragons/sage/assets/40480195/52ec5bec-62bc-435c-b198-ee2d0cbb30dc" alt="Register Screen">
+                        <figcaption>Register</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://github.com/jasmine-dragons/sage/assets/40480195/791b5ccb-ede1-4206-85d6-30a9487ce72f" alt="Sign In Screen">
+                        <figcaption>Sign In</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://github.com/jasmine-dragons/sage/assets/40480195/d5f2e59a-96be-43fe-9638-0af0176603c1" alt="Request Call Screen">
+                        <figcaption>Request Call</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://github.com/jasmine-dragons/sage/assets/40480195/9972287d-8aa3-4b24-b3cd-1435a14ac168" alt="Video Call Screen">
+                        <figcaption>Video Call</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h3>Tech Stack</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Next.js</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Material UI</span>
+                    <span class="tech-tag">Twilio Video API</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">WebSockets</span>
+                    <span class="tech-tag">Figma</span>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h3>Links</h3>
+                <a class="project-link" href="https://github.com/jasmine-dragons/sage" target="_blank">View on GitHub →</a>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <p>© 2025 Tina Ma</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
