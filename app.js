@@ -25,33 +25,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Custom cursor with confetti trail
-const colors = ['#3498db', '#e74c3c', '#f39c12', '#9b59b6', '#1abc9c', '#024133'];
 
-const mainCursor = document.createElement('div');
-mainCursor.className = 'cursor-main';
-document.body.appendChild(mainCursor);
-
-document.addEventListener('mousemove', (e) => {
-  // Move persistent cursor circle
-  mainCursor.style.left = e.clientX + 'px';
-  mainCursor.style.top = e.clientY + 'px';
-
-  // Create confetti trails
-  for (let i = 0; i < 3; i++) {
-    setTimeout(() => {
-      const confetti = document.createElement('div');
-      confetti.className = 'cursor-confetti';
-      confetti.style.left = (e.pageX + (Math.random() - 0.5) * 20) + 'px';
-      confetti.style.top = (e.pageY + (Math.random() - 0.5) * 20) + 'px';
-      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-      document.body.appendChild(confetti);
-
-      setTimeout(() => confetti.remove(), 600);
-    }, i * 50);
-  }
-
-});
 
 // Fade-in on scroll
 const fadeEls = document.querySelectorAll('.fade-in');
