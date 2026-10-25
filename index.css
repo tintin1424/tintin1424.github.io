@@ -8,7 +8,15 @@
 */
 
 html {
-  background-color: #f7f4ee;
+  background-color: #d4f0e8;
+  background-image:
+    radial-gradient(ellipse at 15% 15%, #FFF9BF 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 10%, #C8F0A0 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 75%, #7ADEC0 0%, transparent 50%),
+    radial-gradient(ellipse at 10% 80%, #A0C8F8 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 50%, #6AAEE8 0%, transparent 55%);
+  min-height: 100vh;
+  background-attachment: fixed;
 }
 
 body {
@@ -42,6 +50,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-headshot {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  top: -6px;
+  transition: transform 0.2s ease;
+}
+
+.header-headshot:hover {
+  transform: scale(1.4);
 }
 
 .header-title {
@@ -93,14 +121,32 @@ header {
   position: absolute;
   left: -300px;
   top: 60px;
-  width: 260px;
+  width: 320px;
+  transition: transform 0.2s ease;
+}
+
+.self-portrait:hover {
+  animation: wiggle 0.4s ease;
 }
 
 .frisbee-doodle {
   position: absolute;
   right: -200px;
   top: 220px;
-  width: 160px;
+  width: 210px;
+  transition: transform 0.2s ease;
+}
+
+.frisbee-doodle:hover {
+  animation: wiggle 0.4s ease;
+}
+
+@keyframes wiggle {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(-4deg); }
+  50%  { transform: rotate(4deg); }
+  75%  { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
 }
 
 /* === Section dividers === */
@@ -135,8 +181,8 @@ h2 {
 }
 
 .tech-tag {
-  background-color: #eaede6;
-  color: #3a5c3f;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #024133;
   padding: 5px 14px;
   border-radius: 20px;
   font-size: 13px;
@@ -153,10 +199,11 @@ h2 {
 .project-card {
   flex: 1;
   padding: 24px;
-  border: 1.5px solid #c8c2b6;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
+  background-color: rgba(255, 255, 255, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -181,6 +228,15 @@ h2 {
   color: #4a4a4a;
   margin: 0;
   font-size: 15px;
+}
+
+.thatch-link {
+  color: #024133;
+  transition: font-size 0.2s ease;
+}
+
+.thatch-link:hover {
+  font-size: 22px;
 }
 
 /* === Contact === */
